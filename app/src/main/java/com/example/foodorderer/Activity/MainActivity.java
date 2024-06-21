@@ -11,14 +11,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.foodorderer.Adaptor.CategoryAdaptor;
+import com.example.foodorderer.Adaptor.PopularAdaptor;
 import com.example.foodorderer.Domain.CategoryDomain;
+import com.example.foodorderer.Domain.FoodDomain;
 import com.example.foodorderer.R;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    private RecyclerView.Adapter adapter;
-    private RecyclerView recyclerViewCategorieyList;
+    private RecyclerView.Adapter adapterCategory,adapterPopular;
+    private RecyclerView recyclerViewCategorieyList,recyclerViewPopularList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         recyclerViewCategoriey();
+        recyclerViewPopular();
     }
 
     private void recyclerViewCategoriey() {
@@ -46,6 +49,22 @@ public class MainActivity extends AppCompatActivity {
         category.add(new CategoryDomain("Drink", "cat_4"));
         category.add(new CategoryDomain("Donut", "cat_5"));
 
-        adapter = new CategoryAdaptor(category);
+        adapterCategory = new CategoryAdaptor(category);
+        recyclerViewCategorieyList.setAdapter(adapterCategory);
+    }
+
+    private void recyclerViewPopular() {
+        LinearLayoutManager LinearLaoutManager = new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false);
+        recyclerViewPopularList = findViewById(R.id.recyclerViewPopularList);
+        recyclerViewPopularList.setLayoutManager(LinearLaoutManager);
+
+        ArrayList<FoodDomain> foodList = new ArrayList<>();
+
+        foodList.add(new FoodDomain("Peperoni Pizza", "pop_1", "slices pepperoni, mozzerella cheese, fresh oregano, ground black  pepper, pizza sauce", 9.76));
+        foodList.add(new FoodDomain("Cheese Burger", "pop_2","beef patty, cheese, lettuce, tomato, onion, pickles, ketchup, mustard", 5.99));
+        foodList.add(new FoodDomain("Vegetable Pizza", "pop_3", "bell pepper, onion, tomato, mushroom, black olives, mozzarella cheese, pizza sauce", 11.99));
+
+        adapterPopular = new PopularAdaptor(foodList);
+        recyclerViewPopularList.setAdapter(adapterPopular);
     }
 }
