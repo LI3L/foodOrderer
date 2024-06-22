@@ -33,7 +33,7 @@ public class PopularAdaptor extends  RecyclerView.Adapter<PopularAdaptor.Popular
     }
 
     @Override
-    public void onBindViewHolder(@NonNull PopularAdaptor.PopularViewHolder holder, @SuppressLint("RecyclerView") int position) {//1:52:00
+    public void onBindViewHolder(@NonNull PopularAdaptor.PopularViewHolder holder, @SuppressLint("RecyclerView") int position) {
         holder.title.setText(popularFood.get(position).getTitle());
         holder.fee.setText(String.valueOf(popularFood.get(position).getFee()));
         String picUrl = "";
