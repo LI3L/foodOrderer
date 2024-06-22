@@ -32,7 +32,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
-                    android:layout_marginTop="32dp"
+                    android:layout_marginTop="8dp"
                     android:text="Hi Rechard"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
@@ -207,6 +207,7 @@
                     android:paddingStart="22dp"
                     android:paddingEnd="22dp"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/txt_Popular" />
 
@@ -228,7 +229,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="bottom"
             android:backgroundTint="#f6f6f6"
-            app:fabCradleMargin="8dp"
+            app:fabCradleMargin="18dp"
             app:fabCradleRoundedCornerRadius="50dp"
             app:fabCradleVerticalOffset="6dp">
 

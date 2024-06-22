@@ -36,7 +36,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     }
 
     private void getBundle() {
-        object=(FoodDomain) getIntent().getParcelableExtra("object");
+        object=(FoodDomain) getIntent().getSerializableExtra("object");
 
         int drawableResourceId = this.getResources().getIdentifier(object.getPic(), "drawable", this.getPackageName());
         Glide.with(this).load(drawableResourceId).into(picFood);
@@ -77,7 +77,7 @@ public class ShowDetailActivity extends AppCompatActivity {
     private void initView() {
         addToCartBtn = findViewById(R.id.addToCartBtn);
         titleTxt = findViewById(R.id.titleTxt);
-        feeTxt = findViewById(R.id.fee);
+        feeTxt = findViewById(R.id.priceTxt);
         descriptionTxt = findViewById(R.id.descriptionTxt);
         numberOrderTxt = findViewById(R.id.numberOrderTxt);
         plusBtn = findViewById(R.id.plusBtn);
