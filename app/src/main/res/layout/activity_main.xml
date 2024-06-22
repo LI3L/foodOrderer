@@ -5,6 +5,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
     tools:context=".Activity.MainActivity">
 
     <ScrollView
@@ -216,9 +218,13 @@
         </LinearLayout>
     </ScrollView>
 
+
+
+
+
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
@@ -304,7 +310,7 @@
                         android:id="@+id/txt_clearBtn"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="clear"
+                        android:text=""
                         android:textAlignment="center"
                         android:textColor="#676767 "
                         android:textSize="12sp" />
@@ -365,16 +371,20 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
+            style="@style/Widget.MaterialComponents.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
+            android:layout_gravity="center_horizontal|top"
             android:backgroundTint="#ff5e00"
             android:elevation="3dp"
             android:src="@drawable/shopping_cart"
             app:maxImageSize="30dp"
-            app:tint="#ffffff">
+            app:tint="#ffffff"
 
-        </com.google.android.material.floatingactionbutton.FloatingActionButton>
+            />
+
+
+
 
     </androidx.coordinatorlayout.widget.CoordinatorLayout>
 

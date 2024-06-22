@@ -36,6 +36,7 @@
                 android:textColor="#ff5e00"
                 android:textSize="24sp"
                 android:text="$"
+                android:textStyle="bold"
                 android:textAlignment="center"
                 />
 
