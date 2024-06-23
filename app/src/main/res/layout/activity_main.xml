@@ -35,7 +35,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginStart="32dp"
                     android:layout_marginTop="8dp"
-                    android:text="Hi Rechard"
+                    android:text="Hi Liel"
                     android:textColor="#dd3d00"
                     android:textSize="20sp"
                     android:textStyle="bold"
