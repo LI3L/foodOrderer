@@ -1,6 +1,9 @@
 package com.example.foodorderer.Activity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -15,6 +18,7 @@ import com.example.foodorderer.Adaptor.PopularAdaptor;
 import com.example.foodorderer.Domain.CategoryDomain;
 import com.example.foodorderer.Domain.FoodDomain;
 import com.example.foodorderer.R;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
@@ -35,6 +39,24 @@ public class MainActivity extends AppCompatActivity {
 
         recyclerViewCategoriey();
         recyclerViewPopular();
+        bottomNavigation();
+    }
+    private void bottomNavigation() {
+        FloatingActionButton floatingActionButton = findViewById(R.id.cartBtn);
+        LinearLayout homeBtn = findViewById(R.id.homeBtn);
+
+        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, CartListActivity.class));
+            }
+        });
+        homeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this, MainActivity.class));
+            }
+        });
     }
 
     private void recyclerViewCategoriey() {
